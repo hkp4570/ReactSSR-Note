@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -28612,6 +28612,19 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/assets/yifu.jpg":
+/*!*****************************!*\
+  !*** ./src/assets/yifu.jpg ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "img/yifu.39d45.jpg");
+
+/***/ }),
+
 /***/ "./src/client/App.jsx":
 /*!****************************!*\
   !*** ./src/client/App.jsx ***!
@@ -28667,7 +28680,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate( /*#__PURE__*/react__WE
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"beautybutton":"YMLqj2XOArWp0hz6uki-f"};
+module.exports = {"beautybutton":"YMLqj2XOArWp0hz6uki-f","bg":"_3AFwmFUZPhk0HS8-McgHfI"};
 
 /***/ }),
 
@@ -28684,13 +28697,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/pages/Home/index.css");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_yifu_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/yifu.jpg */ "./src/assets/yifu.jpg");
 
 
-console.log('styles', _index_css__WEBPACK_IMPORTED_MODULE_1___default.a);
+
 
 function App() {
   const [number, setNumber] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_yifu_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _index_css__WEBPACK_IMPORTED_MODULE_1___default.a.bg
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: _index_css__WEBPACK_IMPORTED_MODULE_1___default.a.beautybutton,
     onClick: () => setNumber(number + 1)
   }, "click"));
@@ -28701,4 +28720,4 @@ function App() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.c8e93.js.map
+//# sourceMappingURL=bundle.7f44c.js.map
