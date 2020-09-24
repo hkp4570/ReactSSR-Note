@@ -1,10 +1,11 @@
-import React from 'react';
-import Home from '../pages/Home';
+import React from "react";
+import { StaticRouter } from "react-router-dom";
+import RouterApp from "../routes/RouterApp";
 
-function App () {
+export default ({ location, context }) => {
   return (
-    <div><Home /></div>
-  )
-}
-
-export default App
+    <StaticRouter location={location} context={context}>
+      <RouterApp />
+    </StaticRouter>
+  );
+};

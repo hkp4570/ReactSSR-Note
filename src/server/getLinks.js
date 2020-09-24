@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export function getLinks() {
+export default function() {
   const result = fs
     .readdirSync("./public/css")
     .filter(file => file.endsWith(".css"))
