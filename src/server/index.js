@@ -1,5 +1,5 @@
 import React from 'react';
-import render from './render'
+import render from './render';
 
 import express from 'express';
 const app = express();

@@ -3,10 +3,6 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   watch: true,
-  entry: './src/server',
-  output: {
-    filename: 'server.js'
-  },
   target: 'node',
   resolve: {
     alias: {

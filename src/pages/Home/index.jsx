@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Index = () => {
+function App () {
+  const [number, setNumber] = useState(0);
   return (
     <div>
-      React home 123
+      <h1>{number}</h1>
+      <button onClick={() => setNumber(number + 1)}>click</button>
     </div>
   )
 }
 
-export default Index
+export default App
