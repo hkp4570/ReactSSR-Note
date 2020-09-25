@@ -1,6 +1,10 @@
 import Head from 'next/head';
+import {getMovies} from '../../services/movieService'
+
 const Movies = () => {
-  console.log('movies render')
+  getMovies().then(res => {
+    console.log(res)
+  })
   return (
     <div>
       <Head>

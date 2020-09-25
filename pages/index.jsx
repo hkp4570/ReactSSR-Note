@@ -2,7 +2,6 @@ import Head from 'next/head';
 import {useEffect, useState} from 'react';
 
 const Index =  () => {
-  console.log('index render')
   const [advs, setAdvs] = useState([]);
   useEffect(() => {
     setAdvs([
