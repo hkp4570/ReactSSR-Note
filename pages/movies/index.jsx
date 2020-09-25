@@ -1,5 +1,6 @@
 import Head from 'next/head';
-export default () => {
+const Movies = () => {
+  console.log('movies render')
   return (
     <div>
       <Head>
@@ -9,3 +10,4 @@ export default () => {
     </div>
   )
 }
+export default Movies;
