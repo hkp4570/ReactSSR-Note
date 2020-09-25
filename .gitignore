@@ -1,5 +1,5 @@
 node_modules/
-dist/
 .history/
 .idea/
-yarn.lock
+dist/
+.next/

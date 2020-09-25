@@ -1,2 +1,0 @@
-# hkp-ReactSSR
-ReactSSR
