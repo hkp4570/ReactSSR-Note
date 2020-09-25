@@ -29,3 +29,4 @@
 
 ## redux
 1. 判断是客户端还是服务端   global.document是否有值
+2. 同时使用中间件和redux工具
