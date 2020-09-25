@@ -1,6 +1,7 @@
 const path = require("path");
 const baseConfig = require("./webpack.base");
 const { merge } = require("webpack-merge");
+const nodeExternals = require("webpack-node-externals");
 const serverConfig = {
   devtool: "none",
   entry: "./src/server",
@@ -10,6 +11,7 @@ const serverConfig = {
     path: path.resolve(__dirname, "./dist"),
     publicPath: '/',
   },
+  externals: [nodeExternals()],
   module: {
     rules: [
         {

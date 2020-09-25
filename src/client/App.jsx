@@ -3,8 +3,11 @@ import { BrowserRouter } from 'react-router-dom'
 import '../assets/global.css';
 import RouterApp from '../routes/RouterApp';
 import { Provider } from 'react-redux';
-import store from '../store';
-import { getMovies } from '../services/movies'
+// import store from '../store';
+import { getMovies } from '../services/movies';
+import makeStore from '../store'
+
+const store = makeStore();
 
 function App () {
   getMovies().then(res => {

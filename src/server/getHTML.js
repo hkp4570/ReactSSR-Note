@@ -1,8 +1,7 @@
 import  getScript  from "./getScript";
 import  getLinks  from "./getLinks";
-import store from '../store';
 
-export default (componentHTML, path) => {
+export default (componentHTML, path, store) => {
   const html = `
   <!DOCTYPE html>
   <html lang="en">
