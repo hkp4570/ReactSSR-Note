@@ -26,3 +26,6 @@
 
 ## 路由配置
 ```renderRoutes```根据路由配置生成对应的路由
+
+## redux
+1. 判断是客户端还是服务端   global.document是否有值
