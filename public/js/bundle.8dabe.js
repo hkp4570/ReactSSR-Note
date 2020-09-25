@@ -37583,13 +37583,55 @@ function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_movies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/actions/movies */ "./src/store/actions/movies.js");
 
 
-function Index(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u7535\u5F71\u5217\u8868"));
+ //类组件：componentWillMount 服务端运行
+//类组件：componentDidMount  服务端不运行
+
+function Index({
+  movies = [],
+  loadMovies
+}) {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    // 如果服务器处理了数据，则什么也不做
+    // 如果服务器没有处理数据，则需要加载数据
+    if (window.requestPath === '/movies') {
+      // 不需要加载数据
+      console.log('不需要加载');
+      return;
+    } else {
+      console.log('加载数据');
+      loadMovies && loadMovies();
+    }
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u7535\u5F71\u5217\u8868"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, movies.map(ele => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: ele._id
+  }, ele.name))));
+} // 在组件服务端渲染之前需要运行的函数
+
+
+Index.loadData = async function (store) {
+  await store.dispatch(Object(_store_actions_movies__WEBPACK_IMPORTED_MODULE_2__["fetchMovies"])());
+};
+
+function mapStateToProps(state) {
+  return {
+    movies: state.movies.data
+  };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+function mapDispatchToProps(dispatch) {
+  return {
+    loadMovies() {
+      dispatch(Object(_store_actions_movies__WEBPACK_IMPORTED_MODULE_2__["fetchMovies"])());
+    }
+
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Index));
 
 /***/ }),
 
@@ -37923,4 +37965,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.4448f.js.map
+//# sourceMappingURL=bundle.8dabe.js.map
