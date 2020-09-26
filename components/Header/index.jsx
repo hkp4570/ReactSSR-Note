@@ -25,6 +25,16 @@ export default () => {
           </Link>
         </li>
         <li>
+          <Link href={'/login'}>
+            <a>登录</a>
+          </Link>
+        </li>
+        <li>
+          <Link href={'/redux'}>
+            <a>redux</a>
+          </Link>
+        </li>
+        <li>
           <Link href={'/movies/[id]'} as={'/movies/5'}>
             <a>电影详情</a>
           </Link>
