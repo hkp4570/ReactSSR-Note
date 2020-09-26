@@ -12,7 +12,9 @@ const Movies = ({pageProps:{movies}}) => {
       <ul>
         {movies.map(e => (
           <li key={e._id}>
-            <span>{e.name}</span>
+            <a href={`/movies/${e._id}`}>
+              <span>{e.name}</span>
+            </a>
           </li>
         ))}
       </ul>
