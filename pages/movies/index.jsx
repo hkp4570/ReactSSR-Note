@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 // 先把数据请求到，然后形成静态页面
 // router.push()的第三个参数{shallow:true}，是否每次服务端都运行
-const Movies = ({ pageProps: { movies, page, total, limit  }}) => {
+const Movies = ({ movies, page, total, limit}) => {
   const router = useRouter()
   return (
     <div>

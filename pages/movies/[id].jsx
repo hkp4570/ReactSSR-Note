@@ -1,7 +1,7 @@
 import { getMovies, getMovie } from '../../services/movieService'
 import {useRouter} from 'next/router';
 
-const MoviesDetail = ({ pageProps: { movie } }) => {
+const MoviesDetail = ({  movie  }) => {
   const router = useRouter();
   if(router.isFallback){
     return <h1>loading...</h1>
