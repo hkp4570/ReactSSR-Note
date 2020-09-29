@@ -1,31 +1,34 @@
 export const actionsType = {
   increase: 'counter/increase',
   decrease: 'counter/decrease',
-  asyncIncrease:'counter/asyncIncrease',
-  asyncDecrease:'counter/asyncDecrease',
+  asyncIncrease: 'counter/asyncIncrease',
+  asyncDecrease: 'counter/asyncDecrease',
 }
 
-function delay(duration) {
+function delay (duration) {
   return new Promise(resolve => {
-    setTimeout(resolve, duration);
+    setTimeout(resolve, duration)
   })
 }
 
 export function increase () {
-  return { type:actionsType.increase }
+  return { type: actionsType.increase }
 }
+
 export function decrease () {
-  return { type:actionsType.decrease }
+  return { type: actionsType.decrease }
 }
+
 export function asyncIncrease () {
-  return async function(dispatch){
-    await delay(1000);
-    dispatch(increase());
+  return async function (dispatch) {
+    await delay(1000)
+    dispatch(increase())
   }
 }
+
 export function asyncDecrease () {
-  return async function(dispatch){
-    await delay(1000);
-    dispatch(decrease());
+  return async function (dispatch) {
+    await delay(1000)
+    dispatch(decrease())
   }
 }

@@ -1,6 +1,8 @@
-import counter from './counter';
-import {combineReducers} from 'redux';
+import counter from './counter'
+import login from './login'
+import { combineReducers } from 'redux'
 
 export default combineReducers({
   counter,
+  login,
 })

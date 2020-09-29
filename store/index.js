@@ -1,10 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import reducer from './reducers';
+import { createStore, applyMiddleware } from 'redux'
+import reducer from './reducers'
 import thunk from 'redux-thunk'
-import {composeWithDevTools} from 'redux-devtools-extension'
-import {isBrowser} from '../utils/isBrowser'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { isBrowser } from '../utils/isBrowser'
 
-let store;
+let store
 /**
  * 创建仓库的函数
  * 该函数保证，如果是服务器端，每一次调用产生一个新的仓库
@@ -12,14 +12,14 @@ let store;
  * @param {*} initialState 仓库的初始值
  */
 export default function (initialState) {
-  if(isBrowser()){
+  if (isBrowser()) {
     // 客户端
-    if(!store){
-      store = create(initialState);
+    if (!store) {
+      store = create(initialState)
     }
-    return store;
+    return store
   }
-  return create(initialState);
+  return create(initialState)
 }
 
 function create (initialState) {
