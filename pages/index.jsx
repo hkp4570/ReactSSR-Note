@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import NestedLayout from '../components/NestedLayout';
 import {useEffect, useState} from 'react';
 
 const Index =  () => {
@@ -21,6 +22,12 @@ const Index =  () => {
         ))}
       </ul>
     </div>
+  )
+}
+Index.getLayout = function getLayout(page){
+  console.log(page,'page');
+  return (
+    <NestedLayout>{page}</NestedLayout>
   )
 }
 export default Index;
